@@ -1,0 +1,360 @@
+  #wrapper {
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .header {
+    transition: all 0.3s;
+    display: flex;
+    height: 300px;
+    background: #464646;
+    overflow: hidden;
+    border-radius: 5px;
+    animation-name: appear;
+    animation-duration: 15s;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo {
+    width: 50%;
+    background: url('https://i.pinimg.com/originals/fb/fb/ea/fbfbead8c5fe1e2ec3b8b30f72a7ae1a.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background: rgba(45, 95, 125, 0.85);
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    color: #c7b483;
+  }
+
+  .info a {
+    text-decoration: none;
+    color: #756bc0;
+    font-weight: 150;
+    opacity: 0;
+  }
+
+  .info a:active {
+    text-decoration: underline;
+  }
+
+  .header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 16px 0px gold;
+  }
+
+  .header:hover .photo {
+    background: url('https://i.pinimg.com/originals/37/9e/ba/379eba67c4e65099ecb67225cf836a90.png');
+    background-size: cover;
+    background-position: center;
+    animation-name: animate-image;
+    animation-duration: 0.3s;
+  }
+
+  .header:hover .info a {
+    opacity: 1;
+  }
+
+  .info h1 {
+    font-size: 36px;
+    width: 100%;
+    font-weight: 400;
+  }
+
+  .info h1 ~ p {
+    font-size: 24px;
+    width: 75%;
+    font-weight: 100;
+  }
+
+  .about {
+    text-align: center;
+    margin: 30px 25px;
+    color: #cbc8c7;
+    animation-name: appear;
+    animation-duration: 15s;
+  }
+
+  .about > h1 {
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 25px;
+  }
+
+  .about > h1 ~ p {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 25px;
+  }
+
+  .separator {
+    width: 252px;
+    margin: 60px auto;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(133, 133, 133, 0.75), rgba(0, 0, 0, 0));
+    height: 1px;
+    border: 0;
+  }
+
+  .block-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60%;
+    margin-bottom: 40px;
+    border-radius: 5px;
+  }
+
+  .tech-list {
+    text-align: center;
+    color: #bcbcbc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-list > h1 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 35px;
+  }
+
+  .tech-block {
+    min-height: 300px;
+    width: 45%;
+    background: #dee8e6;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.6;
+  }
+
+  .text-info{
+    color: #0059af;
+
+  }
+
+  .text-info-header{
+    color: black;
+  }
+
+  @-webkit-keyframes swing {
+    15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+    }
+    30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+    }
+    40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes swing {
+    15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+    }
+    30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+    }
+    40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  .tech-block:hover {
+    -webkit-animation: swing 0.6s ease;
+    animation: swing 0.6s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    opacity: 1;
+  }
+
+  .wars {
+    opacity: 0;
+  }
+
+  .star{
+    opacity: 0;
+  }
+
+
+  /* Animation properties */
+  .star {
+    animation: star 10s ease-out;
+  }
+  .wars {
+    animation: wars 10s ease-out;
+  }
+
+  @keyframes appear {
+    0%{
+      opacity: 0;
+    }
+
+    50%{
+      opacity: 0;
+    }
+
+    100%{
+      opacity: 1;
+    }
+  }
+
+  /* Keyframes */
+  @keyframes star {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+
+  @keyframes wars {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(0.5em);
+    }
+    20% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+
+  @keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes move-byline {
+    0% {
+      transform: translateZ(5em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
+  }
+
+  /* Make the 3D work on the container */
+  .starwars-demo {
+    perspective: 500px;
+    transform-style: preserve3d;
+  }
+
+  /* General styles and layout */
+  body {
+    background: #000000 url('https://cssanimation.rocks/demo/starwars/images/bg.jpg');
+  }
+
+  .starwars-demo {
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 20em;
+  }
+
+  .byline span {
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .star, .wars,{
+    position: absolute;
+  }
+
+  .star {
+    top: -0.75em;
+  }
+
+  .wars {
+    bottom: -0.5em;
+  }
+
+  /*** Media queries for adjusting to different screen sizes ***/
+
+  @media only screen and (max-width: 500px) {
+    .starwars-demo {
+      font-size: 10px;
+    }
+  
+
+  @media only screen and (max-width: 480px) {
+    .starwars-demo {
+      font-size: 17px;
+    }
+  }
